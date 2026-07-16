@@ -15,13 +15,13 @@
       </div>
     {% else %}
       <div class="empty-state">
-        <p>Todavía no hay productos en esta colección.</p>
+        <p>Nothing here yet. Next drop loading…</p>
       </div>
     {% endif %}
 
     {% if paginate.pages > 1 %}
       <nav class="pagination">
-        {% if paginate.previous %}<a href="{{ paginate.previous.url }}">Anterior</a>{% endif %}
+        {% if paginate.previous %}<a href="{{ paginate.previous.url }}">Previous</a>{% endif %}
         {% for part in paginate.parts %}
           {% if part.is_link %}
             <a href="{{ part.url }}">{{ part.title }}</a>
@@ -29,7 +29,7 @@
             <span class="is-current">{{ part.title }}</span>
           {% endif %}
         {% endfor %}
-        {% if paginate.next %}<a href="{{ paginate.next.url }}">Siguiente</a>{% endif %}
+        {% if paginate.next %}<a href="{{ paginate.next.url }}">Next</a>{% endif %}
       </nav>
     {% endif %}
   {% endpaginate %}

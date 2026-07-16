@@ -6,7 +6,7 @@
       <span class="product-card__placeholder">{{ product.title | slice: 0 }}</span>
     {% endif %}
     {% if product.compare_at_price > product.price %}
-      <span class="product-card__badge product-card__badge--sale">Oferta</span>
+      <span class="product-card__badge product-card__badge--sale">Sale</span>
     {% endif %}
   </a>
   <div class="product-card__info">
@@ -17,9 +17,9 @@
     <form action="{{ routes.cart_add_url }}" method="post" enctype="multipart/form-data">
       <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
       <input type="hidden" name="return_to" value="/cart">
-      <button type="submit" class="button button--outline product-card__add">Añadir al carrito</button>
+      <button type="submit" class="button button--outline product-card__add">Add to cart</button>
     </form>
   {% else %}
-    <button class="button button--outline product-card__add" disabled>Agotado</button>
+    <button class="button button--outline product-card__add" disabled>Sold out</button>
   {% endif %}
 </div>

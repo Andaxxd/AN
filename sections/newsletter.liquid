@@ -10,7 +10,7 @@
         <button type="submit" class="button button--primary">{{ section.settings.button_label }}</button>
       </div>
       {% if form.posted_successfully? %}
-        <p class="newsletter-form__success">¡Gracias por unirte a Zaentra!</p>
+        <p class="newsletter-form__success">You're in. Welcome to Zaentra.</p>
       {% endif %}
     {% endform %}
   </div>
@@ -20,9 +20,9 @@
 {
   "name": "Newsletter",
   "settings": [
-    { "type": "text", "id": "heading", "label": "Título", "default": "No te pierdas ningún lanzamiento" },
-    { "type": "text", "id": "text", "label": "Texto", "default": "Ofertas, novedades y sorpresas directo a tu correo." },
-    { "type": "text", "id": "button_label", "label": "Texto del botón", "default": "Unirme" }
+    { "type": "text", "id": "heading", "label": "Título", "default": "Join the movement" },
+    { "type": "text", "id": "text", "label": "Texto", "default": "Early access to drops, limited pieces and nothing else. No spam." },
+    { "type": "text", "id": "button_label", "label": "Texto del botón", "default": "Join" }
   ],
   "presets": [{ "name": "Newsletter" }]
 }

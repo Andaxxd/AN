@@ -18,17 +18,17 @@
   {
     "name": "Colores",
     "settings": [
-      { "type": "color", "id": "color_background", "label": "Fondo", "default": "#0C0C0E" },
-      { "type": "color", "id": "color_text", "label": "Texto", "default": "#EDE9E1" },
-      { "type": "color", "id": "color_primary", "label": "Color principal (botones, enlaces)", "default": "#C6A15B" },
-      { "type": "color", "id": "color_primary_text", "label": "Texto sobre color principal", "default": "#14100A" },
-      { "type": "color", "id": "color_accent", "label": "Color de acento (ofertas, destacados)", "default": "#8CA2AE" },
-      { "type": "color", "id": "color_success", "label": "Color de regalo / novedades", "default": "#8CA2AE" },
-      { "type": "color", "id": "color_header_bg", "label": "Fondo del header", "default": "#0C0C0E" },
-      { "type": "color", "id": "color_footer_bg", "label": "Fondo del footer", "default": "#17161A" },
-      { "type": "color", "id": "color_footer_text", "label": "Texto del footer", "default": "#EDE9E1" },
-      { "type": "color", "id": "color_announcement_bg", "label": "Fondo barra de anuncios", "default": "#17161A" },
-      { "type": "color", "id": "color_announcement_text", "label": "Texto barra de anuncios", "default": "#C6A15B" }
+      { "type": "color", "id": "color_background", "label": "Fondo", "default": "#0A0A0B" },
+      { "type": "color", "id": "color_text", "label": "Texto", "default": "#EAE6DC" },
+      { "type": "color", "id": "color_primary", "label": "Color principal (botones, enlaces)", "default": "#EAE6DC" },
+      { "type": "color", "id": "color_primary_text", "label": "Texto sobre color principal", "default": "#0C0C0D" },
+      { "type": "color", "id": "color_accent", "label": "Color de acento (ofertas, destacados)", "default": "#E23B2E" },
+      { "type": "color", "id": "color_success", "label": "Color de regalo / novedades", "default": "#E23B2E" },
+      { "type": "color", "id": "color_header_bg", "label": "Fondo del header", "default": "#0A0A0B" },
+      { "type": "color", "id": "color_footer_bg", "label": "Fondo del footer", "default": "#141416" },
+      { "type": "color", "id": "color_footer_text", "label": "Texto del footer", "default": "#EAE6DC" },
+      { "type": "color", "id": "color_announcement_bg", "label": "Fondo barra de anuncios", "default": "#E23B2E" },
+      { "type": "color", "id": "color_announcement_text", "label": "Texto barra de anuncios", "default": "#120C0B" }
     ]
   },
   {

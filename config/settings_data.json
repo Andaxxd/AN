@@ -1,0 +1,24 @@
+{
+  "current": "Default",
+  "presets": {
+    "Default": {
+      "logo_width": 140,
+      "color_background": "#FFFFFF",
+      "color_text": "#14141F",
+      "color_primary": "#7C3AED",
+      "color_primary_text": "#FFFFFF",
+      "color_accent": "#FF6B35",
+      "color_success": "#06D6A0",
+      "color_header_bg": "#FFFFFF",
+      "color_footer_bg": "#14141F",
+      "color_footer_text": "#FFFFFF",
+      "color_announcement_bg": "#14141F",
+      "color_announcement_text": "#FFD23F",
+      "type_header_font": "poppins_n6",
+      "type_body_font": "inter_n4",
+      "social_instagram": "zaentra",
+      "social_tiktok": "zaentra",
+      "social_facebook": ""
+    }
+  }
+}

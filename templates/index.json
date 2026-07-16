@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "hero": { "type": "hero", "settings": {} },
+    "promo": { "type": "free-bracelet-promo", "settings": {} },
+    "categories": { "type": "collection-list", "settings": {} },
+    "featured": { "type": "featured-collection", "settings": {} },
+    "story": { "type": "brand-story", "settings": {} },
+    "newsletter": { "type": "newsletter", "settings": {} }
+  },
+  "order": ["hero", "promo", "categories", "featured", "story", "newsletter"]
+}

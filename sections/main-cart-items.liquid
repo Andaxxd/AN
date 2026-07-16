@@ -1,0 +1,59 @@
+<div class="cart">
+  <h1>Carrito</h1>
+  {% if cart.item_count > 0 %}
+    <form action="{{ routes.cart_url }}" method="post" novalidate>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in cart.items %}
+            <tr>
+              <td class="cart-table__product">
+                {% if item.image %}
+                  <img src="{{ item.image | image_url: width: 150 }}" alt="{{ item.title | escape }}">
+                {% endif %}
+                <div>
+                  <a href="{{ item.url }}">{{ item.product.title }}</a>
+                  {% unless item.product.has_only_default_variant %}
+                    <p class="cart-table__variant">{{ item.variant.title }}</p>
+                  {% endunless %}
+                </div>
+              </td>
+              <td>{{ item.original_price | money }}</td>
+              <td>
+                <input type="number" name="updates[{{ item.key }}]" value="{{ item.quantity }}" min="0" aria-label="Cantidad">
+              </td>
+              <td>{{ item.final_line_price | money }}</td>
+              <td><a href="{{ item.url_to_remove }}" aria-label="Quitar">✕</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="cart__footer">
+        <p class="cart__subtotal">Subtotal: <strong>{{ cart.total_price | money }}</strong></p>
+        <p class="cart__note">Impuestos y envío se calculan en el checkout.</p>
+        <div class="cart__actions">
+          <button type="submit" name="update" class="button button--outline">Actualizar carrito</button>
+          <button type="submit" name="checkout" class="button button--primary">Finalizar compra</button>
+        </div>
+      </div>
+    </form>
+  {% else %}
+    <div class="empty-state">
+      <p>Tu carrito está vacío.</p>
+      <a href="{{ routes.all_products_collection_url }}" class="button button--primary">Seguir comprando</a>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{ "name": "Carrito", "settings": [] }
+{% endschema %}

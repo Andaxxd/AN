@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ page_title }}{% unless page_title contains shop.name %} | {{ shop.name }}{% endunless %}</title>
+{% if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
+<link rel="canonical" href="{{ canonical_url }}">
+{% if settings.favicon %}<link rel="icon" href="{{ settings.favicon | image_url: width: 32 }}" type="image/png">{% endif %}
+
+{{ content_for_header }}
+
+{{ 'theme.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  {{ settings.type_body_font | font_face: font_display: 'swap' }}
+  {{ settings.type_header_font | font_face: font_display: 'swap' }}
+
+  :root {
+    --color-background: {{ settings.color_background }};
+    --color-text: {{ settings.color_text }};
+    --color-primary: {{ settings.color_primary }};
+    --color-primary-text: {{ settings.color_primary_text }};
+    --color-accent: {{ settings.color_accent }};
+    --color-success: {{ settings.color_success }};
+    --color-header-bg: {{ settings.color_header_bg }};
+    --color-footer-bg: {{ settings.color_footer_bg }};
+    --color-footer-text: {{ settings.color_footer_text }};
+    --color-announcement-bg: {{ settings.color_announcement_bg }};
+    --color-announcement-text: {{ settings.color_announcement_text }};
+    --font-header: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+    --font-body: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+  }
+{% endstyle %}
+</head>
+<body>
+  <a class="skip-to-content" href="#MainContent">Saltar al contenido</a>
+
+  {% section 'announcement-bar' %}
+  {% section 'header' %}
+
+  <main id="MainContent">
+    {{ content_for_layout }}
+  </main>
+
+  {% section 'footer' %}
+
+  {{ 'theme.js' | asset_url | script_tag }}
+</body>
+</html>

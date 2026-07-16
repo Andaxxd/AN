@@ -1,0 +1,25 @@
+<div class="hero{% if section.settings.image %} hero--has-image{% endif %}"{% if section.settings.image %} style="--hero-image: url('{{ section.settings.image | image_url: width: 1800 }}');"{% endif %}>
+  <div class="hero__inner">
+    {% if section.settings.eyebrow != blank %}<p class="hero__eyebrow">{{ section.settings.eyebrow }}</p>{% endif %}
+    <h1 class="hero__heading">{{ section.settings.heading }}</h1>
+    <p class="hero__text">{{ section.settings.text }}</p>
+    {% if section.settings.button_label != blank %}
+      <a href="{{ section.settings.button_link }}" class="button button--primary">{{ section.settings.button_label }}</a>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Imagen de fondo (opcional)" },
+    { "type": "text", "id": "eyebrow", "label": "Texto pequeño superior", "default": "NUEVA COLECCIÓN" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Viste tu actitud. Acompaña tu estilo." },
+    { "type": "textarea", "id": "text", "label": "Texto", "default": "Camisetas de tirantes, fundas de móvil y joyería para ellos y ellas. Diseños modernos, hechos para destacar." },
+    { "type": "text", "id": "button_label", "label": "Texto del botón", "default": "Ver colección" },
+    { "type": "url", "id": "button_link", "label": "Enlace del botón" }
+  ],
+  "presets": [{ "name": "Hero" }]
+}
+{% endschema %}

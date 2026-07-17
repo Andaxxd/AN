@@ -17,19 +17,19 @@
   {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
   :root {
-    --color-background: {{ settings.color_background }};
-    --color-text: {{ settings.color_text }};
-    --color-primary: {{ settings.color_primary }};
-    --color-primary-text: {{ settings.color_primary_text }};
-    --color-accent: {{ settings.color_accent }};
-    --color-success: {{ settings.color_success }};
-    --color-header-bg: {{ settings.color_header_bg }};
-    --color-footer-bg: {{ settings.color_footer_bg }};
-    --color-footer-text: {{ settings.color_footer_text }};
-    --color-announcement-bg: {{ settings.color_announcement_bg }};
-    --color-announcement-text: {{ settings.color_announcement_text }};
-    --font-header: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
-    --font-body: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    --color-background: {{ settings.color_background | default: '#0A0A0B' }};
+    --color-text: {{ settings.color_text | default: '#EAE6DC' }};
+    --color-primary: {{ settings.color_primary | default: '#EAE6DC' }};
+    --color-primary-text: {{ settings.color_primary_text | default: '#0C0C0D' }};
+    --color-accent: {{ settings.color_accent | default: '#E23B2E' }};
+    --color-success: {{ settings.color_success | default: '#E23B2E' }};
+    --color-header-bg: {{ settings.color_header_bg | default: '#0A0A0B' }};
+    --color-footer-bg: {{ settings.color_footer_bg | default: '#141416' }};
+    --color-footer-text: {{ settings.color_footer_text | default: '#EAE6DC' }};
+    --color-announcement-bg: {{ settings.color_announcement_bg | default: '#E23B2E' }};
+    --color-announcement-text: {{ settings.color_announcement_text | default: '#120C0B' }};
+    --font-header: {{ settings.type_header_font.family | default: 'Impact' }}, {{ settings.type_header_font.fallback_families | default: 'Arial Narrow Bold, sans-serif' }};
+    --font-body: {{ settings.type_body_font.family | default: 'Helvetica Neue' }}, {{ settings.type_body_font.fallback_families | default: 'Helvetica, Arial, sans-serif' }};
   }
 {% endstyle %}
 </head>
